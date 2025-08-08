@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Animasi Teks dan Emoji Mengalir</title>
+  <style>
+    body {
+      background: #f8f8f8;
+      overflow-x: hidden;
+    }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 80px;
+      overflow: hidden;
+      margin-top: 50px;
+    }
+    .animated-text {
+      position: absolute;
+      right: -400px;
+      top: 0;
+      font-style: italic;
+      font-size: 2.2rem;
+      color: #007fff;
+      animation: moveText 5s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes moveText {
+      from {
+        right: -400px;
+      }
+      to {
+        right: 100vw;
+      }
+    }
+    .emoji-stream {
+      position: absolute;
+      right: -60px;
+      top: 40px;
+      font-size: 2rem;
+      animation: moveEmoji 3s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes moveEmoji {
+      from {
+        right: -60px;
+      }
+      to {
+        right: 100vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="animated-text">@CMY_KIDZZ</div>
+    <div class="emoji-stream">🎉✨🔥🌈💥</div>
+  </div>
+</body>
+</html>
